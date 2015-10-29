@@ -19,7 +19,7 @@ def getbody(url):
     curl.close()
 
     return out.getvalue().decode("utf-8")  #The data needs converted from bytes to easily read.
-   
+    
 
 def geturls(html):
     'Takes a string and extracts url patterns'
@@ -41,7 +41,6 @@ def geturls(html):
 if __name__ == '__main__':
     'prints the URLs html code or extracted URLs'
     url = 'https://www.torproject.org/'
-    reg = None
 
     if len(sys.argv) >= 2:  #If the command line supplies the first argument change the url 
         url = sys.argv[1]
